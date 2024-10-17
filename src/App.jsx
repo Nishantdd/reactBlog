@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import { useEffect, useState } from "react"
 import {Header, Footer} from "./components/index.js"
 import { useDispatch } from "react-redux"
 import authService from "./appwrite/auth.js"
@@ -21,7 +21,9 @@ function App() {
         .finally(() => setLoading(false))
     }, [])
 
-    return !loading ? (
+    if(loading) return null;
+
+    return (
         <div className="min-h-screen flex flex-wrap content-between bg-gray-400"> 
             <div className="w-full block">
                 <Header />
@@ -31,7 +33,7 @@ function App() {
                 <Footer />
             </div>
         </div>
-    ) : null
+    )
 }
 
 export default App
