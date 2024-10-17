@@ -9,6 +9,7 @@ import Select from "./Select.jsx";
 import Postcard from "./Postcard.jsx";
 import Login from "./Login.jsx";
 import Signup from "./Signup.jsx";
+import AuthLayout from "./AuthLayout.jsx";
 
 export {
     Header,
@@ -21,5 +22,6 @@ export {
     Select,
     Postcard,
     Login,
-    Signup
+    Signup,
+    AuthLayout
 }
