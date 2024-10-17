@@ -19,11 +19,10 @@ export class AuthService {
                 // call another method
                 return this.login(email, password);
             }
-            else {
-                return userAccount;
-            }
+            else throw new Error("Something went wrong while registering the user")
         } catch (error) {
             console.error("Appwrite serive :: createAccount :: error : ", error)
+            return false
         }
     }
 
